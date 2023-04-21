@@ -2,8 +2,10 @@ import { Logo } from '../components/Logo'
 import { FormEvent, useState } from 'react'
 import { useNavigate } from 'react-router-dom'
 import { useCreateSubscriberMutation } from '../graphql/generated'
-import reactIcon from '../../../../../src/assets/react-icon.svg'
-import codeMockup from '../../../../../src/assets/code-mockup.png'
+// eslint-disable-next-line import/no-absolute-path
+import reactIcon from '/src/assets/react-icon.svg'
+// eslint-disable-next-line import/no-absolute-path
+import codeMockup from '/src/assets/code-mockup.png'
 
 export function Subscribe() {
     const [name, setName] = useState('')
