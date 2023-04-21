@@ -1,0 +1,18 @@
+schema: https://api-sa-east-1.hygraph.com/v2/clgha0z7h1rht01t5dj9s6zu8/master
+
+
+# schema: %import.meta.env.VITE_API_URL%
+
+documents: './src/graphql/**/*.graphql'
+
+generates:
+  ./src/graphql/generated.ts:
+    plugins:
+      - typescript
+      - typescript-operations
+      - typescript-react-apollo
+    config:
+      reactApolloVersion: 3
+      withHooks: true
+      withHOC: false
+      withComponent: false
